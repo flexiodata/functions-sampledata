@@ -13,8 +13,8 @@
 #   description: The properties to return (defaults to all properties). See "Notes" for a listing of the available properties.
 #   required: false
 # examples:
-# - '10'
-# - '10, "cc_provider, cc_number, cc_expire"'
+# - '1, "cc_provider, cc_number, cc_expire"'
+# - '10, "cc_number"'
 # notes: |
 #   The following properties are allowed:
 #     * `cc_provider`: A credit card provider
@@ -76,7 +76,9 @@ def flexio_handler(flex):
 
         # build up the result
         result = []
-        result.append(properties)
+
+        # don't include header for now
+        # result.append(properties)
 
         faker = Faker()
         for x in range(input['count']):

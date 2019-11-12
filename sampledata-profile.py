@@ -13,7 +13,8 @@
 #   description: The properties to return (defaults to all properties). See "Notes" for a listing of the available properties.
 #   required: false
 # examples:
-# - '10'
+# - '1, "name, email"'
+# - '10, "name, email, phone, homepage"'
 # notes: |
 #   The following properties are allowed:
 #     * `uuid`: The unique identifier for the profile
@@ -97,7 +98,9 @@ def flexio_handler(flex):
 
         # build up the result
         result = []
-        result.append(properties)
+
+        # don't include header for now
+        # result.append(properties)
 
         faker = Faker()
         for x in range(input['count']):

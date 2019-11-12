@@ -13,8 +13,8 @@
 #   description: The properties to return (defaults to all properties). See "Notes" for a listing of the available properties.
 #   required: false
 # examples:
-# - '10'
-# - '1, "name_prefix, first_name, last_name, name_suffix"'
+# - '1, "name"'
+# - '10, "name_prefix, first_name, last_name, name_suffix"'
 # notes: |
 #   The following properties are allowed:
 #     * `name`: A name for a person
@@ -78,7 +78,9 @@ def flexio_handler(flex):
 
         # build up the result
         result = []
-        result.append(properties)
+
+        # don't include header for now
+        # result.append(properties)
 
         faker = Faker()
         for x in range(input['count']):

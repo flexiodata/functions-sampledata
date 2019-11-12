@@ -13,8 +13,8 @@
 #   description: The properties to return (defaults to all properties). See "Notes" for a listing of the available properties.
 #   required: false
 # examples:
-# - '10'
-# - '10, "iban"'
+# - '1, "iban"'
+# - '10, "bban, iban"'
 # notes: |
 #   The following properties are allowed:
 #     * `iban`: International Bank Account Number; this number uniquely identifies a bank internationally
@@ -72,7 +72,9 @@ def flexio_handler(flex):
 
         # build up the result
         result = []
-        result.append(properties)
+
+        # don't include header for now
+        # result.append(properties)
 
         faker = Faker()
         for x in range(input['count']):

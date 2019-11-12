@@ -13,8 +13,8 @@
 #   description: The properties to return (defaults to all properties). See "Notes" for a listing of the available properties.
 #   required: false
 # examples:
-# - '10'
-# - '10, "street1, city, state, zip"'
+# - '1, "street1, city, state, zip"'
+# - '10, "city, state, zip"'
 # notes: |
 #   The following properties are allowed:
 #     * `street1`: The primary street address for the contact info
@@ -84,7 +84,9 @@ def flexio_handler(flex):
 
         # build up the result
         result = []
-        result.append(properties)
+
+        # don't include header for now
+        # result.append(properties)
 
         faker = Faker()
         for x in range(input['count']):
