@@ -1,0 +1,15 @@
+title: Sample Data Integration
+description: Functions for getting sample data
+image:
+  src: https://logo.clearbit.com/flex.io
+  alt: Flex.io logo
+functions:
+  - path: sampledata-bank.py
+  - path: sampledata-company.py
+  - path: sampledata-contact.py
+  - path: sampledata-credential.py
+  - path: sampledata-creditcard.py
+  - path: sampledata-identifier.py
+  - path: sampledata-person.py
+  - path: sampledata-profile.py
+prompts: []
