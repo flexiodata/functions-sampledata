@@ -1,7 +1,7 @@
 title: Sample Data Integration
 description: Functions for getting sample data
 image:
-  src: https://static.flex.io/assets/icon-sampledata-128.png
+  src: https://static.flex.io/assets/logos/icon-sampledata-128.png
   alt: Sample data logo
 functions:
   - path: sampledata-bank.py
