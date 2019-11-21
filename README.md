@@ -1,4 +1,4 @@
-# Sample Data Google Sheets & Excel Spreadsheet Add on
+# Sample Data Google Sheets & Excel Spreadsheet Add-on
 
 Sample data, also called mock data or fake data, is used often used in place of real data for testing. Using sample data is also a great way to avoid privacy issues during presentation and demonstrations. This sample data spreadsheet integration for Google Sheets and Microsoft Excel enables you to generate fake data on command and is generated using the Python Faker library. This add-on will enable you to integrate on-demand, refreshable mock data without leaving your spreadsheet.
 
