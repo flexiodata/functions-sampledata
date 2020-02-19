@@ -12,13 +12,16 @@
 #   type: array
 #   description: The properties to return (defaults to all properties). See "Notes" for a listing of the available properties.
 #   required: false
+# returns:
+# - name: iban
+#   type: string
+#   description: International Bank Account Number; this number uniquely identifies a bank internationally
+# - name: bban
+#   type: string
+#   description: Basic Bank Account Number; this number identifies a bank within a specific country
 # examples:
 # - '1, "iban"'
 # - '10, "bban, iban"'
-# notes: |
-#   The following properties are allowed:
-#     * `iban`: International Bank Account Number; this number uniquely identifies a bank internationally
-#     * `bban`: Basic Bank Account Number; this number identifies a bank within a specific country
 # ---
 
 import json
