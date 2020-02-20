@@ -12,19 +12,34 @@
 #   type: array
 #   description: The properties to return (defaults to all properties). See "Notes" for a listing of the available properties.
 #   required: false
+# returns:
+# - name: street1
+#   type: string
+#   description: The primary street address for the contact info
+# - name: street2
+#   type: string
+#   description: The secondary street address for the contact info, such as a unit number
+# - name: city
+#   type: string
+#   description: The city for the address contact info
+# - name: state
+#   type: string
+#   description: The state for the address contact info
+# - name: zip
+#   type: string
+#   description: The zipcode for the address contact info
+# - name: email
+#   type: string
+#   description: A contact email address
+# - name: phone
+#   type: string
+#   description: A contact phone number
+# - name: homepage
+#   type: string
+#   description: A contact website
 # examples:
 # - '1, "street1, city, state, zip"'
 # - '10, "city, state, zip"'
-# notes: |
-#   The following properties are allowed:
-#     * `street1`: The primary street address for the contact info
-#     * `street2`: The secondary street address for the contact info, such as a unit number
-#     * `city`: The city for for the address contact info
-#     * `state`: The state for the address contact info
-#     * `zip`: The zipcode for the address contact info
-#     * `email`: A contact email address
-#     * `phone`: A contact phone number
-#     * `homepage`: A contact website
 # ---
 
 import json

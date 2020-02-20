@@ -12,16 +12,25 @@
 #   type: array
 #   description: The properties to return (defaults to all properties). See "Notes" for a listing of the available properties.
 #   required: false
+# returns:
+# -name: name
+#  type: string
+#  description: The name of the person
+# -name: name_prefix
+#  type: string
+#  description: The name prefix of the person
+# -name: name_suffix
+#  type: string
+#  description: The name suffix of the person
+# -name: first_name
+#  type: string
+#  description: The first name of the person
+# -name: last_name
+#  type: string
+#  description: The last name of the person
 # examples:
 # - '1, "name"'
 # - '10, "name_prefix, first_name, last_name, name_suffix"'
-# notes: |
-#   The following properties are allowed:
-#     * `name`: A name for a person
-#     * `name_prefix`: A name prefix for a person
-#     * `name_suffix`: A name suffix for a person
-#     * `first_name`: A first name for a person
-#     * `last_name`: A last name for a person
 # ---
 
 import json

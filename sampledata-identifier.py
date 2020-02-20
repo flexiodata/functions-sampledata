@@ -12,13 +12,16 @@
 #   type: array
 #   description: The properties to return (defaults to all properties). See "Notes" for a listing of the available properties.
 #   required: false
+# returns:
+# - name: uuid
+#   type: string
+#   description: A unique identifier
+# - name: slug
+#   type: string
+#   description: A slug
 # examples:
 # - '1, "uuid"'
 # - '10, "uuid"'
-# notes: |
-#   The following properties are allowed:
-#     * `uuid`: A unique identifier
-#     * `slug`: A slug
 # ---
 
 import json

@@ -12,15 +12,22 @@
 #   type: array
 #   description: The properties to return (defaults to all properties). See "Notes" for a listing of the available properties.
 #   required: false
+# returns:
+# - name: cc_provider
+#   type: string
+#   description: A credit card provider
+# - name: cc_number
+#   type: string
+#   description: A credit card number
+# - name: cc_expire
+#   type: string
+#   description: A credit card expiration date
+# - name: cc_code
+#   type: string
+#   description: A credit card security code
 # examples:
 # - '1, "cc_provider, cc_number, cc_expire"'
 # - '10, "cc_number"'
-# notes: |
-#   The following properties are allowed:
-#     * `cc_provider`: A credit card provider
-#     * `cc_number`: A credit card number
-#     * `cc_expire`: A credit card expiration date
-#     * `cc_code`: A credit card security code
 # ---
 
 import json

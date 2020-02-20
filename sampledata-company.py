@@ -12,14 +12,19 @@
 #   type: array
 #   description: The properties to return (defaults to all properties). See "Notes" for a listing of the available properties.
 #   required: false
+# returns:
+# - name: company
+#   type: string
+#   description: The name of the company
+# - name: company_suffix
+#   type: string
+#   description: The suffix of the company
+# - name: company_catchphrase
+#   type: string
+#   description: The catch phrase of the company
 # examples:
 # - '1, "company"'
 # - '10, "company, company_catchphrase"'
-# notes: |
-#   The following properties are allowed:
-#     * `company`: The name of a company
-#     * `company_suffix`: The suffix for the company
-#     * `company_catchphrase`: The catch phrase for the company
 # ---
 
 import json

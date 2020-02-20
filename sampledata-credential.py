@@ -12,14 +12,19 @@
 #   type: array
 #   description: The properties to return (defaults to all properties). See "Notes" for a listing of the available properties.
 #   required: false
+# returns:
+# - name: email
+#   type: string
+#   description: An email address
+# - name: username
+#   type: string
+#   description: A username
+# - name: password
+#   type: string
+#   description: A password
 # examples:
 # - '1, "email, username"'
 # - '10, "email"'
-# notes: |
-#   The following properties are allowed:
-#     * `email`: An email address
-#     * `username`: A username
-#     * `password`: A password
 # ---
 
 import json
