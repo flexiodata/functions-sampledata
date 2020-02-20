@@ -4,24 +4,24 @@
 # title: Sample Data Bank
 # description: Returns a list of fake bank information
 # params:
-# - name: count
-#   type: integer
-#   description: Number of fake records to return, between 0 and 10000
-#   required: true
-# - name: properties
-#   type: array
-#   description: The properties to return (defaults to all properties). See "Returns" for a listing of the available properties.
-#   required: false
+#   - name: count
+#     type: integer
+#     description: Number of fake records to return, between 0 and 10000
+#     required: true
+#   - name: properties
+#     type: array
+#     description: The properties to return (defaults to all properties). See "Returns" for a listing of the available properties.
+#     required: false
 # returns:
-# - name: iban
-#   type: string
-#   description: International Bank Account Number; this number uniquely identifies a bank internationally
-# - name: bban
-#   type: string
-#   description: Basic Bank Account Number; this number identifies a bank within a specific country
+#   - name: iban
+#     type: string
+#     description: International Bank Account Number; this number uniquely identifies a bank internationally
+#   - name: bban
+#     type: string
+#     description: Basic Bank Account Number; this number identifies a bank within a specific country
 # examples:
-# - '1, "iban"'
-# - '10, "bban, iban"'
+#   - '1, "iban"'
+#   - '10, "bban, iban"'
 # ---
 
 import json

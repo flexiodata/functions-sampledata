@@ -4,33 +4,33 @@
 # title: Sample Data Person
 # description: Returns a list of fake person data
 # params:
-# - name: count
-#   type: integer
-#   description: Number of fake records to return, between 0 and 10000
-#   required: true
-# - name: properties
-#   type: array
-#   description: The properties to return (defaults to all properties). See "Returns" for a listing of the available properties.
-#   required: false
+#   - name: count
+#     type: integer
+#     description: Number of fake records to return, between 0 and 10000
+#     required: true
+#   - name: properties
+#     type: array
+#     description: The properties to return (defaults to all properties). See "Returns" for a listing of the available properties.
+#     required: false
 # returns:
-# -name: name
-#  type: string
-#  description: The name of the person
-# -name: name_prefix
-#  type: string
-#  description: The name prefix of the person
-# -name: name_suffix
-#  type: string
-#  description: The name suffix of the person
-# -name: first_name
-#  type: string
-#  description: The first name of the person
-# -name: last_name
-#  type: string
-#  description: The last name of the person
+#   - name: name
+#     type: string
+#     description: The name of the person
+#   - name: name_prefix
+#     type: string
+#     description: The name prefix of the person
+#   - name: name_suffix
+#     type: string
+#     description: The name suffix of the person
+#   - name: first_name
+#     type: string
+#     description: The first name of the person
+#   - name: last_name
+#     type: string
+#     description: The last name of the person
 # examples:
-# - '1, "name"'
-# - '10, "name_prefix, first_name, last_name, name_suffix"'
+#   - '1, "name"'
+#   - '10, "name_prefix, first_name, last_name, name_suffix"'
 # ---
 
 import json

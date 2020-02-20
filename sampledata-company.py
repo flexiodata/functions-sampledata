@@ -4,27 +4,27 @@
 # title: Sample Data Company
 # description: Returns a list of fake company information
 # params:
-# - name: count
-#   type: integer
-#   description: Number of fake records to return, between 0 and 10000
-#   required: true
-# - name: properties
-#   type: array
-#   description: The properties to return (defaults to all properties). See "Returns" for a listing of the available properties.
-#   required: false
+#   - name: count
+#     type: integer
+#     description: Number of fake records to return, between 0 and 10000
+#     required: true
+#   - name: properties
+#     type: array
+#     description: The properties to return (defaults to all properties). See "Returns" for a listing of the available properties.
+#     required: false
 # returns:
-# - name: company
-#   type: string
-#   description: The name of the company
-# - name: company_suffix
-#   type: string
-#   description: The suffix of the company
-# - name: company_catchphrase
-#   type: string
-#   description: The catch phrase of the company
+#   - name: company
+#     type: string
+#     description: The name of the company
+#   - name: company_suffix
+#     type: string
+#     description: The suffix of the company
+#   - name: company_catchphrase
+#     type: string
+#     description: The catch phrase of the company
 # examples:
-# - '1, "company"'
-# - '10, "company, company_catchphrase"'
+#   - '1, "company"'
+#   - '10, "company, company_catchphrase"'
 # ---
 
 import json

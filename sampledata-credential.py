@@ -4,27 +4,27 @@
 # title: Sample Data Credential
 # description: Returns a list of fake credential information
 # params:
-# - name: count
-#   type: integer
-#   description: Number of fake records to return, between 0 and 10000
-#   required: true
-# - name: properties
-#   type: array
-#   description: The properties to return (defaults to all properties). See "Returns" for a listing of the available properties.
-#   required: false
+#   - name: count
+#     type: integer
+#     description: Number of fake records to return, between 0 and 10000
+#     required: true
+#   - name: properties
+#     type: array
+#     description: The properties to return (defaults to all properties). See "Returns" for a listing of the available properties.
+#     required: false
 # returns:
-# - name: email
-#   type: string
-#   description: An email address
-# - name: username
-#   type: string
-#   description: A username
-# - name: password
-#   type: string
-#   description: A password
+#   - name: email
+#     type: string
+#     description: An email address
+#   - name: username
+#     type: string
+#     description: A username
+#   - name: password
+#     type: string
+#     description: A password
 # examples:
-# - '1, "email, username"'
-# - '10, "email"'
+#   - '1, "email, username"'
+#   - '10, "email"'
 # ---
 
 import json

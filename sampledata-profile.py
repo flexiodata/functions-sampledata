@@ -4,63 +4,63 @@
 # title: Sample Data Profile
 # description: Returns a list of fake profile information
 # params:
-# - name: count
-#   type: integer
-#   description: Number of fake records to return, between 0 and 10000
-#   required: true
-# - name: properties
-#   type: array
-#   description: The properties to return (defaults to all properties). See "Returns" for a listing of the available properties.
-#   required: false
+#   - name: count
+#     type: integer
+#     description: Number of fake records to return, between 0 and 10000
+#     required: true
+#   - name: properties
+#     type: array
+#     description: The properties to return (defaults to all properties). See "Returns" for a listing of the available properties.
+#     required: false
 # returns:
-# - name: uuid
-#   type: string
-#   description: The unique identifier for the profile
-# - name: slug
-#   type: string
-#   description: The slug for the profile
-# - name: email
-#   type: string
-#   description: The email address for the profile
-# - name: username
-#   type: string
-#   description: The username for the profile
-# - name: password
-#   type: string
-#   description: The password for the profile
-# - name: first_name
-#   type: string
-#   description: The first name for the profile
-# - name: last_name
-#   type: string
-#   description: The last name for the profile
-# - name: name
-#   type: string
-#   description: The name for the profile
-# - name: street1
-#   type: string
-#   description: The primary street address for the profile
-# - name: street2
-#   type: string
-#   description: The secondary street address for the profile
-# - name: city
-#   type: string
-#   description: The city of the address for the profile
-# - name: state
-#   type: string
-#   description: The state of the address for the profile
-# - name: zip
-#   type: string
-#   description: The zipcode of the address for the profile
-# - name: phone
-#   type: string
-#   description: The phone number for the profile
-# - name: homepage
-#   type: string
-#   description: The homepage for the profile
+#   - name: uuid
+#     type: string
+#     description: The unique identifier for the profile
+#   - name: slug
+#     type: string
+#     description: The slug for the profile
+#   - name: email
+#     type: string
+#     description: The email address for the profile
+#   - name: username
+#     type: string
+#     description: The username for the profile
+#   - name: password
+#     type: string
+#     description: The password for the profile
+#   - name: first_name
+#     type: string
+#     description: The first name for the profile
+#   - name: last_name
+#     type: string
+#     description: The last name for the profile
+#   - name: name
+#     type: string
+#     description: The name for the profile
+#   - name: street1
+#     type: string
+#     description: The primary street address for the profile
+#   - name: street2
+#     type: string
+#     description: The secondary street address for the profile
+#   - name: city
+#     type: string
+#     description: The city of the address for the profile
+#   - name: state
+#     type: string
+#     description: The state of the address for the profile
+#   - name: zip
+#     type: string
+#     description: The zipcode of the address for the profile
+#   - name: phone
+#     type: string
+#     description: The phone number for the profile
+#   - name: homepage
+#     type: string
+#     description: The homepage for the profile
 # examples:
-# - '1, "name, email"'
-# - '10, "name, email, phone, homepage"'
+#   - '1, "name, email"'
+#   - '10, "name, email, phone, homepage"'
 # ---
 
 import json

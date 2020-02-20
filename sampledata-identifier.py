@@ -4,24 +4,24 @@
 # title: Sample Data Identifier
 # description: Returns a list of fake identifier information
 # params:
-# - name: count
-#   type: integer
-#   description: Number of fake records to return, between 0 and 10000
-#   required: true
-# - name: properties
-#   type: array
-#   description: The properties to return (defaults to all properties). See "Returns" for a listing of the available properties.
-#   required: false
+#   - name: count
+#     type: integer
+#     description: Number of fake records to return, between 0 and 10000
+#     required: true
+#   - name: properties
+#     type: array
+#     description: The properties to return (defaults to all properties). See "Returns" for a listing of the available properties.
+#     required: false
 # returns:
-# - name: uuid
-#   type: string
-#   description: A unique identifier
-# - name: slug
-#   type: string
-#   description: A slug
+#   - name: uuid
+#     type: string
+#     description: A unique identifier
+#   - name: slug
+#     type: string
+#     description: A slug
 # examples:
-# - '1, "uuid"'
-# - '10, "uuid"'
+#   - '1, "uuid"'
+#   - '10, "uuid"'
 # ---
 
 import json

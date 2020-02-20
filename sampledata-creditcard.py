@@ -4,30 +4,30 @@
 # title: Sample Data Credit Card
 # description: Returns a list of fake credit card information
 # params:
-# - name: count
-#   type: integer
-#   description: Number of fake records to return, between 0 and 10000
-#   required: true
-# - name: properties
-#   type: array
-#   description: The properties to return (defaults to all properties). See "Returns" for a listing of the available properties.
-#   required: false
+#   - name: count
+#     type: integer
+#     description: Number of fake records to return, between 0 and 10000
+#     required: true
+#   - name: properties
+#     type: array
+#     description: The properties to return (defaults to all properties). See "Returns" for a listing of the available properties.
+#     required: false
 # returns:
-# - name: cc_provider
-#   type: string
-#   description: A credit card provider
-# - name: cc_number
-#   type: string
-#   description: A credit card number
-# - name: cc_expire
-#   type: string
-#   description: A credit card expiration date
-# - name: cc_code
-#   type: string
-#   description: A credit card security code
+#   - name: cc_provider
+#     type: string
+#     description: A credit card provider
+#   - name: cc_number
+#     type: string
+#     description: A credit card number
+#   - name: cc_expire
+#     type: string
+#     description: A credit card expiration date
+#   - name: cc_code
+#     type: string
+#     description: A credit card security code
 # examples:
-# - '1, "cc_provider, cc_number, cc_expire"'
-# - '10, "cc_number"'
+#   - '1, "cc_provider, cc_number, cc_expire"'
+#   - '10, "cc_number"'
 # ---
 
 import json

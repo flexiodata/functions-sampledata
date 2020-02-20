@@ -4,42 +4,42 @@
 # title: Sample Data Contact
 # description: Returns a list of fake contact information
 # params:
-# - name: count
-#   type: integer
-#   description: Number of fake records to return, between 0 and 10000
-#   required: true
-# - name: properties
-#   type: array
-#   description: The properties to return (defaults to all properties). See "Returns" for a listing of the available properties.
-#   required: false
+#   - name: count
+#     type: integer
+#     description: Number of fake records to return, between 0 and 10000
+#     required: true
+#   - name: properties
+#     type: array
+#     description: The properties to return (defaults to all properties). See "Returns" for a listing of the available properties.
+#     required: false
 # returns:
-# - name: street1
-#   type: string
-#   description: The primary street address for the contact info
-# - name: street2
-#   type: string
-#   description: The secondary street address for the contact info, such as a unit number
-# - name: city
-#   type: string
-#   description: The city for the address contact info
-# - name: state
-#   type: string
-#   description: The state for the address contact info
-# - name: zip
-#   type: string
-#   description: The zipcode for the address contact info
-# - name: email
-#   type: string
-#   description: A contact email address
-# - name: phone
-#   type: string
-#   description: A contact phone number
-# - name: homepage
-#   type: string
-#   description: A contact website
+#   - name: street1
+#     type: string
+#     description: The primary street address for the contact info
+#   - name: street2
+#     type: string
+#     description: The secondary street address for the contact info, such as a unit number
+#   - name: city
+#     type: string
+#     description: The city for the address contact info
+#   - name: state
+#     type: string
+#     description: The state for the address contact info
+#   - name: zip
+#     type: string
+#     description: The zipcode for the address contact info
+#   - name: email
+#     type: string
+#     description: A contact email address
+#   - name: phone
+#     type: string
+#     description: A contact phone number
+#   - name: homepage
+#     type: string
+#     description: A contact website
 # examples:
-# - '1, "street1, city, state, zip"'
-# - '10, "city, state, zip"'
+#   - '1, "street1, city, state, zip"'
+#   - '10, "city, state, zip"'
 # ---
 
 import json
