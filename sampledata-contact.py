@@ -58,7 +58,7 @@ def flexio_handler(flex):
         input = json.loads(input)
         if not isinstance(input, list): raise ValueError
     except ValueError:
-        raise ValueError
+        input = []
 
     # define the expected parameters and map the values to the parameter names
     # based on the positions of the keys/values
