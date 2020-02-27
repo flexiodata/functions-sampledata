@@ -4,13 +4,13 @@
 # title: Sample Data Identifier
 # description: Returns a list of fake identifier information
 # params:
-#   - name: count
-#     type: integer
-#     description: Number of fake records to return, between 0 and 10000
-#     required: true
 #   - name: properties
 #     type: array
 #     description: The properties to return (defaults to all properties). See "Returns" for a listing of the available properties.
+#     required: false
+#   - name: count
+#     type: integer
+#     description: Number of fake records to return, between 0 and 10000; defaults to 100
 #     required: false
 # returns:
 #   - name: uuid
@@ -45,8 +45,8 @@ def flexio_handler(flex):
     # define the expected parameters and map the values to the parameter names
     # based on the positions of the keys/values
     params = OrderedDict()
-    params['count'] = {'required': True, 'type': 'integer', 'min': 0, 'max': 10000, 'coerce': int}
     params['properties'] = {'required': False, 'validator': validator_list, 'coerce': to_list, 'default': '*'}
+    params['count'] = {'required': False, 'type': 'integer', 'min': 0, 'max': 10000, 'coerce': int, 'default': 100}
     input = dict(zip(params.keys(), input))
 
     # validate the mapped input against the validator
