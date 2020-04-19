@@ -17,14 +17,14 @@ functions:
 templates:
   - name: generate-sample-banking-data
     title: Generate sample banking data
-    description: 'Create sample bank data, including account number (BBAN) and international account number (IBAN)'
+    description: 'Create sample bank data, including account numbers, such as BBAN and IBAN'
     gsheets_spreadsheet_id: 
     excel_spreadsheet_path: ''
     in_production: false
     in_staging: false
   - name: generate-sample-company-data
     title: Generate sample company data
-    description: 'Create a set of simulated company data, including name and catchphrase'
+    description: 'Create simulated company data, including name and catchphrase'
     gsheets_spreadsheet_id: 
     excel_spreadsheet_path: ''
     in_production: false
@@ -38,21 +38,21 @@ templates:
     in_staging: false
   - name: generate-sample-credential-data
     title: Generate sample credential data
-    description: 'Produce a sample list of credentials, including username and password'
+    description: 'Create a sample list of credentials, including username and password'
     gsheets_spreadsheet_id: 
     excel_spreadsheet_path: ''
     in_production: false
     in_staging: false
   - name: generate-sample-credit-card-data
     title: Generate sample credit card data
-    description: 'Import sample credit card data, including card provider, number, expiration date and security code'
+    description: 'Create simulated credit card data, including card number, expiration date and security code'
     gsheets_spreadsheet_id: 
     excel_spreadsheet_path: ''
     in_production: false
     in_staging: false
   - name: generate-sample-identifier-data
     title: Generate sample identifier data
-    description: 'Import simulated ID data, including unique identifier and slug'
+    description: 'Create simulated ID data, including unique identifier and slug'
     gsheets_spreadsheet_id: 
     excel_spreadsheet_path: ''
     in_production: false
@@ -66,7 +66,7 @@ templates:
     in_staging: false
   - name: generate-sample-profile-data
     title: Generate sample profile data
-    description: 'Create fake profile information, including id, email, username, password, name and address'
+    description: 'Create sample profile information, including id, username, password, name and address'
     gsheets_spreadsheet_id: 
     excel_spreadsheet_path: ''
     in_production: false
