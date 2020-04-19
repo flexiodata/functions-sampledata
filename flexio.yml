@@ -17,7 +17,7 @@ functions:
 templates:
   - name: generate-sample-banking-data
     title: Generate sample banking data
-    description: 'Create sample bank data, including account numbers, such as BBAN and IBAN'
+    description: 'Create sample banking data, including account numbers, such as BBAN and IBAN'
     gsheets_spreadsheet_id: 
     excel_spreadsheet_path: ''
     in_production: false
