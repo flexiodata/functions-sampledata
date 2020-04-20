@@ -13,6 +13,12 @@
 #     description: Number of fake records to return, between 0 and 10000; defaults to 100
 #     required: false
 # returns:
+#   - name: first_name
+#     type: string
+#     description: The first name of the person
+#   - name: last_name
+#     type: string
+#     description: The last name of the person
 #   - name: street1
 #     type: string
 #     description: The primary street address for the contact info
@@ -79,6 +85,9 @@ def flexio_handler(flex):
     #   documentation: https://faker.readthedocs.io/en/latest/index.html
     #   providers: https://faker.readthedocs.io/en/latest/providers.html
     property_map = OrderedDict()
+
+    property_map['first_name'] = lambda faker: faker.first_name()
+    property_map['last_name'] = lambda faker: faker.last_name()
     property_map['street1'] = lambda faker: faker.street_address()
     property_map['street2'] = lambda faker: faker.secondary_address()
     property_map['city'] = lambda faker: faker.city()
