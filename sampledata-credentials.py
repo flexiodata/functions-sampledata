@@ -1,8 +1,8 @@
 # ---
-# name: sampledata-credential
+# name: sampledata-credentials
 # deployed: true
-# title: Sample Data Credential
-# description: Returns a list of fake credential information
+# title: Sample Data Credentials
+# description: Returns a list of sample credential information
 # params:
 #   - name: properties
 #     type: array
@@ -10,7 +10,7 @@
 #     required: false
 #   - name: count
 #     type: integer
-#     description: Number of fake records to return, between 0 and 10000; defaults to 100
+#     description: Number of sample records to return, between 0 and 10000; defaults to 100
 #     required: false
 # returns:
 #   - name: email

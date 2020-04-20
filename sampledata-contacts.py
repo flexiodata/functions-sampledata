@@ -1,8 +1,8 @@
 # ---
-# name: sampledata-contact
+# name: sampledata-contacts
 # deployed: true
-# title: Sample Data Contact
-# description: Returns a list of fake contact information
+# title: Sample Data Contacts
+# description: Returns a list of sample contact information
 # params:
 #   - name: properties
 #     type: array
@@ -10,7 +10,7 @@
 #     required: false
 #   - name: count
 #     type: integer
-#     description: Number of fake records to return, between 0 and 10000; defaults to 100
+#     description: Number of sample records to return, between 0 and 10000; defaults to 100
 #     required: false
 # returns:
 #   - name: first_name

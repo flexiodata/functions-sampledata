@@ -1,8 +1,8 @@
 # ---
-# name: sampledata-identifier
+# name: sampledata-identifiers
 # deployed: true
-# title: Sample Data Identifier
-# description: Returns a list of fake identifier information
+# title: Sample Data Identifiers
+# description: Returns a list of sample identifier information
 # params:
 #   - name: properties
 #     type: array
@@ -10,7 +10,7 @@
 #     required: false
 #   - name: count
 #     type: integer
-#     description: Number of fake records to return, between 0 and 10000; defaults to 100
+#     description: Number of sample records to return, between 0 and 10000; defaults to 100
 #     required: false
 # returns:
 #   - name: uuid

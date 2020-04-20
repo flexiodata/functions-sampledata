@@ -1,8 +1,8 @@
 # ---
-# name: sampledata-creditcard
+# name: sampledata-creditcards
 # deployed: true
-# title: Sample Data Credit Card
-# description: Returns a list of fake credit card information
+# title: Sample Data Credit Cards
+# description: Returns a list of sample credit card information
 # params:
 #   - name: properties
 #     type: array
@@ -10,7 +10,7 @@
 #     required: false
 #   - name: count
 #     type: integer
-#     description: Number of fake records to return, between 0 and 10000; defaults to 100
+#     description: Number of sample records to return, between 0 and 10000; defaults to 100
 #     required: false
 # returns:
 #   - name: cc_provider
