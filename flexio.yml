@@ -5,13 +5,13 @@ image:
   alt: Sample data logo
 
 functions:
-  - path: sampledata-bank.py
-  - path: sampledata-company.py
-  - path: sampledata-contact.py
-  - path: sampledata-credential.py
-  - path: sampledata-creditcard.py
-  - path: sampledata-identifier.py
-  - path: sampledata-profile.py
+  - path: sampledata-banking.py
+  - path: sampledata-companies.py
+  - path: sampledata-contacts.py
+  - path: sampledata-credentials.py
+  - path: sampledata-creditcards.py
+  - path: sampledata-identifiers.py
+  - path: sampledata-profiles.py
 
 templates:
   - name: generate-sample-banking-data
