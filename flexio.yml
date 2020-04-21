@@ -56,13 +56,6 @@ templates:
     excel_spreadsheet_path: ''
     in_production: false
     in_staging: false
-  - name: generate-sample-person-data
-    title: Generate sample person data
-    description: 'Create sample person data, including first name, last name, prefix and suffix'
-    gsheets_spreadsheet_id:
-    excel_spreadsheet_path: ''
-    in_production: false
-    in_staging: false
   - name: generate-sample-profile-data
     title: Generate sample profile data
     description: 'Create sample profile information, including id, username, password, name and address'
