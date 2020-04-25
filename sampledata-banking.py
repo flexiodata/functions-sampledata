@@ -10,7 +10,7 @@
 #     required: false
 #   - name: filter
 #     type: string
-#     description: Placeholder for filter; note: filter unimplemented for sample data
+#     description: Placeholder for filter (note: filter unimplemented for sample data)
 #     required: false
 # returns:
 #   - name: iban
