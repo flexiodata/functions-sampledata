@@ -8,9 +8,9 @@
 #     type: array
 #     description: The properties to return (defaults to all properties). See "Returns" for a listing of the available properties.
 #     required: false
-#   - name: count
-#     type: integer
-#     description: Number of sample records to return, between 0 and 10000; defaults to 100
+#   - name: filter
+#     type: string
+#     description: Placeholder for filter; note: filter unimplemented for sample data
 #     required: false
 # returns:
 #   - name: company
@@ -28,6 +28,7 @@
 # ---
 
 import json
+import urllib
 import itertools
 from datetime import *
 from decimal import *
@@ -37,19 +38,24 @@ from faker import Faker
 
 def flexio_handler(flex):
 
+    # generate values using following library:
+    # project: https://github.com/joke2k/faker
+    # documentation: https://faker.readthedocs.io/en/latest/index.html
+    # providers: https://faker.readthedocs.io/en/latest/providers.html
+    faker = Faker()
+
     # get the input
     input = flex.input.read()
-    try:
-        input = json.loads(input)
-        if not isinstance(input, list): raise ValueError
-    except ValueError:
+    input = json.loads(input)
+    if not isinstance(input, list):
         input = []
 
     # define the expected parameters and map the values to the parameter names
     # based on the positions of the keys/values
     params = OrderedDict()
     params['properties'] = {'required': False, 'validator': validator_list, 'coerce': to_list, 'default': '*'}
-    params['count'] = {'required': True, 'type': 'integer', 'min': 0, 'max': 10000, 'coerce': int, 'default': 100}
+    params['filter'] = {'required': False, 'type': 'string', 'default': ''} # placeholder to match form of index-styled functions
+    params['config'] = {'required': False, 'type': 'string', 'default': ''} # index-styled config string
     input = dict(zip(params.keys(), input))
 
     # validate the mapped input against the validator
@@ -58,42 +64,49 @@ def flexio_handler(flex):
     if input is None:
         raise ValueError
 
-    # map this function's property names to appropriate function call
-    # use python faker library; see here for more information:
-    #   project: https://github.com/joke2k/faker
-    #   documentation: https://faker.readthedocs.io/en/latest/index.html
-    #   providers: https://faker.readthedocs.io/en/latest/providers.html
-    property_map = OrderedDict()
-    property_map['company'] = lambda faker: faker.company()
-    property_map['company_suffix'] = lambda faker: faker.company_suffix()
-    property_map['company_catchphrase'] = lambda faker: faker.catch_phrase()
+    # get the properties to return and the property map;
+    # if we have a wildcard, get all the properties
+    properties = [p.lower().strip() for p in input['properties']]
+    if len(properties) == 1 and (properties[0] == '' or properties[0] == '*'):
+        properties = list(get_item_info(faker).keys())
 
-    try:
+    # get any configuration settings
+    config = urllib.parse.parse_qs(input['config'])
+    config = {k: v[0] for k, v in config.items()}
+    limit = int(config.get('limit', 100))
+    headers = config.get('headers', 'true').lower()
+    if headers == 'true':
+        headers = True
+    else:
+        headers = False
 
-        # get the properties to return and the property map
-        properties = [p.lower().strip() for p in input['properties']]
+    # write the output
+    flex.output.content_type = 'application/json'
+    flex.output.write('[')
 
-        # if we have a wildcard, get all the properties
-        if len(properties) == 1 and properties[0] == '*':
-            properties = list(property_map.keys())
-
-        # build up the result
-        result = []
-
-        # don't include header for now
-        # result.append(properties)
-
-        faker = Faker()
-        for x in range(input['count']):
-            row = [property_map.get(p,lambda item: '')(faker) or '' for p in properties]
-            result.append(row)
-
-        result = json.dumps(result, default=to_string)
-        flex.output.content_type = "application/json"
+    first_row = True
+    if headers is True:
+        result = json.dumps(properties)
+        first_row = False
         flex.output.write(result)
 
-    except:
-        raise RuntimeError
+    for item in get_data(faker, limit):
+        result = json.dumps([item.get(p) for p in properties])
+        if first_row is False:
+            result = ',' + result
+        first_row = False
+        flex.output.write(result)
+
+    flex.output.write(']')
+
+def get_data(faker, limit):
+
+    idx = 0
+    while True:
+        if idx >= limit:
+            break
+        yield get_item_info(faker)
+        idx = idx + 1
 
 def validator_list(field, value, error):
     if isinstance(value, str):
@@ -105,13 +118,6 @@ def validator_list(field, value, error):
         return
     error(field, 'Must be a string or a list of strings')
 
-def to_string(value):
-    if isinstance(value, (date, datetime)):
-        return value.isoformat()
-    if isinstance(value, (Decimal)):
-        return str(value)
-    return value
-
 def to_list(value):
     # if we have a list of strings, create a list from them; if we have
     # a list of lists, flatten it into a single list of strings
@@ -121,3 +127,10 @@ def to_list(value):
         return list(itertools.chain.from_iterable(value))
     return None
 
+def get_item_info(item):
+
+    info = OrderedDict()
+    info['company'] = item.company()
+    info['company_suffix'] = item.company_suffix()
+    info['company_catchphrase'] = item.catch_phrase()
+    return info
