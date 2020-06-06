@@ -19,49 +19,49 @@ templates:
     description: 'Create sample banking data, including account numbers, such as BBAN and IBAN'
     gsheets_spreadsheet_id: '1-XYY2H2w7qWELWgs30usA7GKM6lxNQA7z4iXdnXk3gs'
     excel_spreadsheet_path: 'https://static.flex.io/templates/sampledata/sampledata-generate-sample-banking-data.xlsx'
-    in_production: true
-    in_staging: false
+    is_public: true
+    is_private: false
   - name: generate-sample-company-data
     title: Generate sample company data
     description: 'Create simulated company data, including name and catchphrase'
     gsheets_spreadsheet_id: '1uWDBZ85fcN3XNHOr_mghElsbZNK7WegCPI1S2P8nsdI'
     excel_spreadsheet_path: 'https://static.flex.io/templates/sampledata/sampledata-generate-sample-company-data.xlsx'
-    in_production: true
-    in_staging: false
+    is_public: true
+    is_private: false
   - name: generate-sample-contact-data
     title: Generate sample contact data
     description: 'Create a sample list of contacts, including address, email, phone and website'
     gsheets_spreadsheet_id: '1_LuwpymKCSaqKVDNO7HI54sfZTRxrkfXKx-f1c3ghGg'
     excel_spreadsheet_path: 'https://static.flex.io/templates/sampledata/sampledata-generate-sample-contact-data.xlsx'
-    in_production: true
-    in_staging: false
+    is_public: true
+    is_private: false
   - name: generate-sample-credential-data
     title: Generate sample credential data
     description: 'Create a sample list of credentials, including username and password'
     gsheets_spreadsheet_id: '1gpO0dhcKJGV4JCOlbIjiZjLdfEMXvgxgvgTl0bO2JQg'
     excel_spreadsheet_path: 'https://static.flex.io/templates/sampledata/sampledata-generate-sample-credential-data.xlsx'
-    in_production: true
-    in_staging: false
+    is_public: true
+    is_private: false
   - name: generate-sample-credit-card-data
     title: Generate sample credit card data
     description: 'Create simulated credit card data, including card number, expiration date and security code'
     gsheets_spreadsheet_id: '1W1eInEk3TeU9OLccUVy-L6bqSX1pWOz4PtMcXTVChRA'
     excel_spreadsheet_path: 'https://static.flex.io/templates/sampledata/sampledata-generate-sample-credit-card-data.xlsx'
-    in_production: true
-    in_staging: false
+    is_public: true
+    is_private: false
   - name: generate-sample-identifier-data
     title: Generate sample identifier data
     description: 'Create simulated ID data, including unique identifier and slug'
     gsheets_spreadsheet_id: '1DZtzpil3zu8NWurF9oqyzAQkak5HW6S6yfRzNJgyBXc'
     excel_spreadsheet_path: 'https://static.flex.io/templates/sampledata/sampledata-sample-identifier-data.xlsx'
-    in_production: true
-    in_staging: false
+    is_public: true
+    is_private: false
   - name: generate-sample-profile-data
     title: Generate sample profile data
     description: 'Create sample profile information, including id, username, password, name and address'
     gsheets_spreadsheet_id: '1zmHeGxfhvLzFoP4xgKpDLOzQMvBDTXeQl6c19BeI2sI'
     excel_spreadsheet_path: 'https://static.flex.io/templates/sampledata/sampledata-sample-profile-data.xlsx'
-    in_production: true
-    in_staging: false
+    is_public: true
+    is_private: false
 
 prompts: []
